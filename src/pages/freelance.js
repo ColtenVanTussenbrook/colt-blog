@@ -25,7 +25,7 @@ export default Freelance;
 
 export const query = graphql`
   query {
-    wordpressPage(slug: { eq: "freelance" }) {
+    wpPage(slug: { eq: "freelance" }) {
         title
         content
     }

@@ -6,7 +6,7 @@ import SocialShare from "../components/socialShare";
 
 function BlogPostTemplate ({ data }) { 
 
-  const date = new Date(data.wordpressPost.date);
+  const date = new Date(data.wpPost.date);
   const day = date.getUTCDate().toString();
   const month = date.getMonth();
   const year = date.getUTCFullYear().toString();
@@ -17,20 +17,20 @@ function BlogPostTemplate ({ data }) {
   ];
 
   const dateStr = monthNames[month] + " " + day + ", "  + year;
-  const authorName = data.wordpressPost.author.name;
+  const authorName = data.wpPost.author.name;
 
   return(
     <Layout>
       <SEO
-        title={data.wordpressPost.title}
+        title={data.wpPost.title}
       />
       <div className="inner-container">
         <div className="blog-post my-16 md:my-24">
-          <h1 className="text-gray-500 text-4xl md:text-5xl underline">{data.wordpressPost.title}</h1>
+          <h1 className="text-gray-500 text-4xl md:text-5xl underline">{data.wpPost.title}</h1>
           <i>Written by: {authorName}</i><span> || </span><i>Published: {dateStr}</i>
-          <div className="mt-8 blog-post-content" dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }} />
+          <div className="mt-8 blog-post-content" dangerouslySetInnerHTML={{ __html: data.wpPost.content }} />
         </div>
-        <SocialShare data={data.wordpressPost} />
+        <SocialShare data={data.wpPost} />
       </div>
     </Layout>
   );
@@ -39,15 +39,16 @@ function BlogPostTemplate ({ data }) {
 export default BlogPostTemplate;
 
 export const query = graphql`
-    query($id: Int!) {
-        wordpressPost(wordpress_id: { eq: $id }) {
-            title
-            content
-            date
-            path
-            author {
-              name
-            }
+  query($id: String!) {
+    wpPost(id: { eq: $id }) {
+      title
+      content
+      date
+      author {
+        node{
+          name
         }
+      }
     }
+  }
 `

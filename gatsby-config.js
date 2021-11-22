@@ -54,26 +54,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "cms.coltenv.com",
-        protocol: "http",
-        hostingWPCOM: false,
-        useACF: false,
-        verboseOutput: false,
-        perPage: 100,
-        concurrentRequests: 10,
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/media",
-          "**/tags",
-          "**/taxonomies",
-          "**/users",
-        ],
-        excludedRoutes: [],
-        normalizer: function ({ entities }) {
-          return entities
-        },
+        url: "https://cms.coltenv.com/graphql",
       },
     },
     {

@@ -26,7 +26,7 @@ export default About;
 
 export const query = graphql`
   query {
-    wordpressPage(slug: { eq: "about" }) {
+    wpPage(slug: { eq: "about" }) {
         title
         content
     }

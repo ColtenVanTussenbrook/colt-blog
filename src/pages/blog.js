@@ -9,7 +9,7 @@ const Blog = ({ data }) => (
     <SEO title="Blog" />
     <div className="pt-6 md:pt-12">
       <h1 className="page-heading">Blog</h1>
-      {data.allWordpressPost.edges.map(post => {
+      {data.allWpPost.edges.map(post => {
             return (
                 <div key={post.node.id}>
                 <PostPreview postInfo={post.node} />
@@ -24,7 +24,7 @@ export default Blog;
 
 export const query = graphql`
   query {
-    allWordpressPost {
+    allWpPost {
         edges {
             node {
                 id
