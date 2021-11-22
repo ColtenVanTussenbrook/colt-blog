@@ -1,8 +1,7 @@
 import React from 'react';
 
 const SocialShare = (props) => {
-  console.log(props.data.path);
-  let siteUrl = 'https://coltenv.com/post' + props.data.path;
+  let siteUrl = 'https://coltenv.com/post' + props.data.slug;
     return (
       <div className="border-2 border-white p-4 w-6/12">
         <p>If you enjoyed this post, please share it!</p>

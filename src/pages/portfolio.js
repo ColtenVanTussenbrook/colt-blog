@@ -4,10 +4,10 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
 
-const Freelance = ({ data }) => (
+const Portfolio = ({ data }) => (
     
   <Layout>
-    <SEO title="Freelance" />
+    <SEO title="Portfolio" />
     <div className="pt-6 md:pt-12">
       <h1 className="page-heading" dangerouslySetInnerHTML={{__html: data.wpPage.title}} />
       <div className="flex-col md:flex-row flex">
@@ -21,11 +21,11 @@ const Freelance = ({ data }) => (
   </Layout>
 )
 
-export default Freelance;
+export default Portfolio;
 
 export const query = graphql`
   query {
-    wpPage(slug: { eq: "freelance" }) {
+    wpPage(slug: { eq: "portfolio" }) {
         title
         content
     }

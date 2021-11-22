@@ -11,16 +11,16 @@ const Header = ({ menuLinks }) => {
   const [isHidden, setIsHidden] = useState("hidden");
     const [menuButton, setMenuButton] = useState(hamburger);
 
-    const toggleMobileMenu = (e) => {
-        e.preventDefault();
-        if (isHidden === "hidden") {
-            setIsHidden("");
-            setMenuButton(x);
-        } else {
-            setIsHidden("hidden");
-            setMenuButton(hamburger);
-        }
-    };
+  const toggleMobileMenu = (e) => {
+      e.preventDefault();
+      if (isHidden === "hidden") {
+          setIsHidden("");
+          setMenuButton(x);
+      } else {
+          setIsHidden("hidden");
+          setMenuButton(hamburger);
+      }
+  };
 
   return (
     <header className="w-full flex justify-end">
@@ -36,7 +36,6 @@ const Header = ({ menuLinks }) => {
               </Link>
             </li>
           ))}
-          <a href="https://github.com/ColtenVanTussenbrook" className="text-2xl underline mr-8" target="_blank" rel="noreferrer">Portfolio</a>
         </ul>
       </nav>
   </header>

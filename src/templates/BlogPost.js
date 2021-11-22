@@ -17,7 +17,7 @@ function BlogPostTemplate ({ data }) {
   ];
 
   const dateStr = monthNames[month] + " " + day + ", "  + year;
-  const authorName = data.wpPost.author.name;
+  const authorName = data.wpPost.author.node.name;
 
   return(
     <Layout>
@@ -44,6 +44,7 @@ export const query = graphql`
       title
       content
       date
+      slug
       author {
         node{
           name
