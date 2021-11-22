@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "colt-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Colten Van Tussenbrook blog and portfolio site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Colten Van Tussenbrook <colten.vantussenbrook@gmail.com>",
   "dependencies": {
     "bluebird": "^3.7.2",
     "gatsby": "^4.0.1",
