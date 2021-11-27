@@ -5,7 +5,6 @@ import SEO from "../components/seo";
 import { graphql } from "gatsby";
 
 const Freelance = ({ data }) => (
-    
   <Layout>
     <SEO title="Freelance" />
     <div className="pt-6 md:pt-12">
