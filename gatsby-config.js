@@ -13,10 +13,6 @@ module.exports = {
         link: '/blog',
       },
       {
-        name: 'Freelance',
-        link: '/freelance',
-      },
-      {
         name: 'About',
         link: '/about',
       },

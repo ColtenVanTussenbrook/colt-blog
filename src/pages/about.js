@@ -3,7 +3,7 @@ import SocialLinks from "../components/socialLinks";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
-import me from '../assets/images/me-web.jpg';
+import me from '../assets/images/me.jpg';
 
 const About = ({ data }) => (
   <Layout>
