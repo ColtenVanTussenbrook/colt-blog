@@ -4,12 +4,10 @@ import { useState } from "react";
 import hamburger from '../assets/images/hamburger.png';
 import x from '../assets/images/x.png';
 
-
-
 const Header = ({ menuLinks }) => {
 
   const [isHidden, setIsHidden] = useState("hidden");
-    const [menuButton, setMenuButton] = useState(hamburger);
+  const [menuButton, setMenuButton] = useState(hamburger);
 
   const toggleMobileMenu = (e) => {
       e.preventDefault();
